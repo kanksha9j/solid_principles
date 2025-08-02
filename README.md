@@ -48,8 +48,8 @@
 - A base class ECU has function collectData() that collects general data from sensors.
 - A separate class PositionProvider has function getCoordinates() collects GPS coordinates.
 
-- BatteryECU, TemperatureECU subclasses — do not need GPS coordinates.
-- TelematicsECU subclass — needs coordinates.
+- BatteryECU, TemperatureECU subclasses do not need GPS coordinates.
+- TelematicsECU subclass needs coordinates.
 - If you would have combined collectData() and getCoordinates(), then BatteryECU or TemperatureECU would be forced to implement getCoordinates(), even though it makes no sense for them. this violates LSP principle.
 
 ## Interface Segregation Principle
